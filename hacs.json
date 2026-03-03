@@ -1,7 +1,6 @@
 {
-  "name": "Solar Storage Card",
-  "content_in_root": true,
-  "filename": "b2500d-card.js"
+  "name": "Ecoflow Battery Card",
+  "description": "A modern, stylish battery card for Ecoflow Delta and River series systems.",
+  "render_readme": true,
+  "filename": "battery-card.js"
 }
-
-
