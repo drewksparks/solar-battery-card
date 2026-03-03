@@ -1,12 +1,11 @@
 [![hacs][hacs-default]][hacs-default-link] [![hacs][hacs-validate]][hacs-validate-link]
 
 
-# B2500D-Card | The Solar Storage Card
+# Ecoflow Battery-Card | Solar + Storage Card
 
-A Home Assistant Custom Card for the Marstek B2500d storage system.
+Based on: https://github.com/Neisi/b2500d-card (A Home Assistant Custom Card for the Marstek B2500d storage system.)
 
-Since you can also define individual entities and options, this card is suitable for other storage systems as well!
-
+Work in progress, working on adding in support for Ecoflow-Cloud default entities and naming conventions.
 <u>Large Card:</u>
 
 ![Example card](./examples/Screenshot.png)
@@ -72,33 +71,30 @@ This card cannot be customized.
 ## ⚙️ Installation
 
 ### Optional Dependencies
-Optionally, the b2500d-card works best with a device provided by this add-on:
+Designed around the default entities provided by EcoFlow-Cloud
+https://github.com/tolwi/hassio-ecoflow-cloud
 
-- [hm2mqtt by @tomquist](https://github.com/tomquist/hm2mqtt)  
 
-This way, you can easily pass the whole device, as the card uses the standard entities.  
-For this, use the `device` parameter.  
+Eventually, I hope to be able to pass the whole device, as the card uses the standard entities.  
 
 If entities have been renamed, this method won’t work. You can still pass individual entities manually (see *Parameters* section).
 
 ### HACS
 #### Community Store
-The card is available in HACS (Home Assistant Community Store).
 
-[![Add HACS Repository](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Neisi&repository=B2500D-Card)
 
 #### Custom Repositories
 1. Open HACS  
-2. Frontend → top right menu → Custom Repositories → `Neisi/b2500d-card`  
+2. Frontend → top right menu → Custom Repositories → `/drewksparks/solar-battery-card`  
 3. Select type: Dashboard  
 4. Install  
 
 ### Manual Installation (without HACS)
-1. Copy `b2500d-card.js` to `/config/www/`  
+1. Copy `battery-card.js` to `/config/www/`  
 2. Add it in Lovelace:  
 ```yaml
 resources:
-  - url: /local/b2500d-card.js
+  - url: /local/battery-card.js
     type: module
 ```
 
