@@ -1,16 +1,24 @@
 {
-  "name": "b2500d-card",
+  "name": "ecoflow-battery-card",
   "version": "1.0.0",
-  "description": "Custom card for Home Assistant",
-  "type": "module",
+  "description": "A custom Home Assistant card for Ecoflow power systems.",
+  "main": "battery-card.js",
   "scripts": {
-    "build": "rollup -c rollup.config.mjs"
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
   },
+  "keywords": [
+    "home-assistant",
+    "ecoflow",
+    "lovelace",
+    "custom-card"
+  ],
+  "author": "Drew Sparks",
+  "license": "MIT",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.0",
-    "@rollup/plugin-json": "^6.0.0",
-    "@rollup/plugin-node-resolve": "^15.0.0",
-    "rollup": "^3.0.0"
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.9.1"
   }
-
 }
